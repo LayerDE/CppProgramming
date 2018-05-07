@@ -1,0 +1,8 @@
+Probleme gabs nur mit dem buildsystem (jenkins oder so) das hat mich 20min gekostet, da es 
+1. u_int64_t nicht hatte (mein debian gcc kennt diesen standart)
+2. kein build bekommen hat weil es dieses checkstyle ding nicht gefunden hat und da wir das nicht hochladen dürfen
+jetzt hab ich es in den root hochgeladen falls das ein problem ist will ich einen downloadlink damit ich is im makefile per wget laden kann und beim clean wieder löschen
+3. durch das hochladen der checkstyle datei kein neuer build begonnen wurde
+
+Insgesammt hat sich die arbeit in grenzen gehalt das einzige was etwas länger ging waren die beknackten stylevorschriften die einem z.b. unsigned long long int verbieten oder die (<type>)var typecasts aus c und bei jeden neuen checkstyle brauch ich länger...
+

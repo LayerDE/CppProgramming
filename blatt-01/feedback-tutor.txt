@@ -1,0 +1,66 @@
+Hallo Victor,
+
+mein Name ist Patrick, ich bin Dein Tutor. Falls Du irgendwelche Fragen zu
+einem Übungsblatt hast, kannst Du mir gerne eine Mail schreiben:
+<brosi@cs.uni-freiburg.de>.
+
+Falls Du ein konkretes Problem mit einer Aufgabe hast, versuche zuerst, eine
+detaillierte Beschreibung des Problems im Forum zu posten, so dass andere
+Studenten auch etwas von der Antwort haben. Wenn Du generelle Fragen in Deiner
+erfahrungen.txt stellst, versuch ich auch immer, diese zu beantworten.
+
+
+# Übungsblatt 1
+
+Gesamtpunktzahl: 20 / 20
+
+
+## Generelles
+
+Du musst bei älteren gcc-versionen (z.B. der, die mit Ubuntu 16.04 kommt), den
+C++11-Standard explizit aktivieren, mit diesem Flag: -std=c++11
+
+Dann kannst du auch uint64_t nutzen.
+
+Das Problem mit der cpplint.py verstehe ich nicht ganz - du hast es doch
+korrekt in dein Repository committed, alles super :)
+
+Die Checkstyle-Vorschriften nerven jetzt vielleicht noch, aber fast alle dieser
+Vorschriften basieren auf jahrelangen Erfahrungen von Codern bei Google und
+helfen, viele häufige Flüchtigkeitsfehler beim Coden zu verhinden. Das spart
+einem teilweise tagelanges Debuggen bei größeren Projekten, glaub mir :)
+
+## Aufgabe 0
+
+Gelöst :)
+
+## Aufgabe 1
+
+Punkte: 5 / 5
+
+Korrekt, aber etwas umständlich programmiert. Schau dir doch mal die
+Musterlösung an, wie es einfacher geht :)
+
+
+## Aufgabe 2
+
+Punkte: 5 / 5
+
+Tests sind da, hab nix zu meckern. Allerdings solltest du EXPECT_DOUBLE_EQ
+verwenden, um Fließkommazahlen zu vergleichen.
+
+
+## Aufgabe 3
+
+Punkte: 5 / 5
+
+Ebenfalls gelöst. n = 64 ist etwas groß, du bekommst auch schon für Werte
+zwischen 10 und 20 eine gute Approximation.
+
+
+## Aufgabe 4
+
+Punkte: 5 / 5
+
+Wunderbar, no complaints.
+
