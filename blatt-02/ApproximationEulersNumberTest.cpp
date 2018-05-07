@@ -4,7 +4,7 @@
 
 #include <gtest/gtest.h>
 #include "./ApproximationEulersNumber.h"
-
+#include <math.h>
 // Test for the faculty function and the approximation function for e.
 TEST(ApproximationEulersNumber, ApproximationEulersNumber) {
   ASSERT_EQ(1, calc_fac(1, 1));
@@ -14,6 +14,8 @@ TEST(ApproximationEulersNumber, ApproximationEulersNumber) {
   ASSERT_EQ(1.0, approximateEulersNumber(0));
   ASSERT_EQ(2.0, approximateEulersNumber(1));
   ASSERT_EQ(2.5, approximateEulersNumber(2));
+  ASSERT_DOUBLE_EQ(M_E, approximateEulersNumber(30));
+
 }
 
 int main(int argc, char** argv) {

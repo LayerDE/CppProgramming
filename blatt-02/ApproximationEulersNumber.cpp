@@ -1,7 +1,8 @@
 // Copyright 2018, University of Freiburg,Victor Maier
 // Chair of Algorithms and Data Structures.
 // Author: Victor Maier
-#include <ApproximationEulersNumber.h>
+#include <inttypes.h>
+#include "./ApproximationEulersNumber.h"
 // A Function to calculate the faculty
 // it need the last result and the next multiplayer
 // x! = x_-1*x  x_0 = 1

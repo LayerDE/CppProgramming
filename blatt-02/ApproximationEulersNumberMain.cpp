@@ -9,7 +9,7 @@
 
 // Program that computes the approximation e using the sum(1/x!) method.
 int main(int argc, char** argv) {
-  int n = 64;  // last working value
+  int n = 20;  // last working value
   // any higher value gives the same result,
   // because the faculty produces a overflow
   // and my program detects this and
