@@ -24,7 +24,7 @@ test:
 
 checkstyle:
 	touch .svn
-	python ../cpplint.py *.cpp
+	python ../cpplint.py *.cpp *.h
 	rm -f .svn
 run:
 	./ApproximationEulersNumberMain
