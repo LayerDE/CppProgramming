@@ -1,3 +1,4 @@
+#pragma once //supported in gcc
 // Copyright 2018, Victor Maier
 // Chair of Algorithms and Data Structures.
 // Author: Victor Maier

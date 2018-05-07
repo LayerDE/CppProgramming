@@ -1,27 +1,31 @@
+.SUFFIXES
+
 all: compile test checkstyle run
 
 ApproximationEulersNumberMain: ApproximationEulersNumberMain.o ApproximationEulersNumber.o
 	g++ -o ApproximationEulersNumberMain ApproximationEulersNumberMain.o ApproximationEulersNumber.o
 	
-ApproximationEulersNumberMain.o:
-	g++ -c ApproximationEulersNumberMain.cpp ApproximationEulersNumberMain.cpp
+ApproximationEulersNumberMain.o: ApproximationEulersNumberMain. ApproximationEulersNumber.h
+	g++ -std=c++11 -c ApproximationEulersNumberMain.cpp
 	
-ApproximationEulersNumber.o:
-	g++ -c ApproximationEulersNumber.cpp
+ApproximationEulersNumber.o: ApproximationEulersNumber.cpp ApproximationEulersNumber.h
+	g++ -std=c++11 -c ApproximationEulersNumber.cpp
 
 ApproximationEulersNumberTest: ApproximationEulersNumberMain.o ApproximationEulersNumber.o
 	g++ -o ApproximationEulersNumberTest ApproximationEulersNumberTest.o ApproximationEulersNumber.o -lgtest -lpthread
 	
-ApproximationEulersNumberTest.o:
-	g++ -c ApproximationEulersNumberTest.cpp
+ApproximationEulersNumberTest.o: ApproximationEulersNumberTest.cpp ApproximationEulersNumber.h
+	g++ -std=c++11 -c ApproximationEulersNumberTest.cpp
 
-compile:
-	ApproximationEulersNumberMain ApproximationEulersNumberTest
+compile: ApproximationEulersNumberMain ApproximationEulersNumberTest
+
 test:
 	./ApproximationEulersNumberTest
 
 checkstyle:
+	touch .svn
 	python ../cpplint.py *.cpp
+	rm -f .svn
 run:
 	./ApproximationEulersNumberMain
 
