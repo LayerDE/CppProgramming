@@ -9,11 +9,7 @@
 
 // Program that computes the approximation e using the sum(1/x!) method.
 int main(int argc, char** argv) {
-  int n = 20;  // last working value
-  // any higher value gives the same result,
-  // because the faculty produces a overflow
-  // and my program detects this and
-  // breaks the loop and returns the n=64 value of e
+  int n = 20;
   printf("\n");
   printf("Approximation of e        : %1.10f\n", approximateEulersNumber(n));
   printf("Internal value of e       : %1.10f\n", M_E);
