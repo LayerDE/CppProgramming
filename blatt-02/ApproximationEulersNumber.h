@@ -7,4 +7,4 @@
 uint64_t calc_fac(uint64_t fac_n_minus_1, int n);
 double approximateEulersNumber(int rounds);
 
-#endif APPROXIMATIONEULERSNUMBER_H_
+#endif  // APPROXIMATIONEULERSNUMBER_H_
