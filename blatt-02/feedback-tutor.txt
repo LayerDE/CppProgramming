@@ -1,0 +1,39 @@
+Hallo Victor,
+
+hier kommt mein Feedback zum Übungsblatt 2. Falls du irgendwelche Fragen hast,
+kannst du mich gerne unter brosi@informatik.uni-freiburg.de kontaktieren.
+
+
+# Übungsblatt 2
+
+Gesamtpunktzahl: 19 / 20
+
+
+## Generelles
+
+Hat eigentlich alles gepasst, es gab nur 2 Dinge, die ich zu bemängeln hatte.
+
+## Aufgabe 1
+
+Punkte: 8 / 8
+
+Du hast den Code korrekt aufgeteilt und Header-Guards eingefügt. Die
+Dokumentation ist in der .cpp-Datei, was okay ist. Üblicher ist es aber, die
+Doku in die Header-Datei zu schreiben. Ansonsten super.
+
+
+## Aufgabe 2
+
+Punkte: 7 / 8
+
+Vorbildlich mit Abhängigkeiten gearbeiten, super. Allerdings ist dir eine
+Kleinigkeit entgangen: wenn du `make clean` machst, und danach `make test`,
+existiert die ApproximationEulersNumberTest nicht. Du hättest in das
+`test`-Target einfach noch eine Abhängigkeit einfügen können :) (-1)
+
+
+## Aufgabe 3
+
+Punkte: 4 / 4
+
+Tipps wurden umgesetzt.

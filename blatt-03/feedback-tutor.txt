@@ -1,0 +1,59 @@
+Hallo Victor,
+
+hier kommt mein Feedback zum Übungsblatt 3. Falls du irgendwelche Fragen hast,
+kannst du mich gerne unter brosi@informatik.uni-freiburg.de kontaktieren.
+
+
+# Übungsblatt 3
+
+Gesamtpunktzahl: 14 / 20
+
+
+## Generelles
+
+Deine Abgabe hat dein Ball richtig gezeichnet und er hat sich auch schön bewegt,
+aber im Detail gab es einige kleinere Probleme, s.u. Denk doch in Zukunft
+daran, auch eine erfahrungen.txt abzugeben, da freuen wir uns sehr drüber :)
+
+
+## Aufgabe 1
+
+Punkte: 5 / 5
+
+Das Overloading der drawBall ist nett, aber normalerweise macht man das nicht
+so. Besser wäre es gewesen, wenn die drawBall ohne bool-Parameter die drawBall
+mit bool-Parameter aufgerufen hätten, und zwar mit einem false Argument. Dann
+hättest du dir die Codeduplizierung gespart. Da die hier aber absichtlich war,
+gabs dafür keinen Abzug. :)
+
+Ansonsten passt alles.
+
+## Aufgabe 2
+
+Punkte: 3 / 5
+
+Bei dieser Aufgabe gab es ein paar kleinere Probleme. Zum einen funktioniert
+dein Kollisionshandling nicht so richtig (ist dir sicher auch aufgefallen), zum
+anderen verhält sich dein Ball insoweit falsch, als dass die Gravitation sich
+bei der Reflektion ebenfalls umkehrt. Das ist der Grund, warum dein Ball trotz
+Reibungsverlust, den du korrekt implementiert hast, beim Aufprallen schneller
+statt langsamer wird. [[-1]]
+
+Außerdem fehlen Tests der drawBall-Methode [[-1]].
+
+## Aufgabe 3
+
+Punkte: 4 / 5
+
+Der Code in deiner Main hätte eigentlich in die drawBall() gehört, dafür gibts
+[[-Karma]]. Allerdings hast du vergessen, den sleep von der Geschwindigkeit
+abhängig zu machen. [[-1]]
+
+## Aufgabe 4
+
+Punkte: 2 / 5
+
+Hm, hier hast du 1:1 das Makefile aus der Vorlesung übernommen. Das ging
+grundsätzlich in Ordnung, allerdings fehlt mir, dass du selbst Pattern-Regeln
+verwendet hast. Außerdem fehlt die globale NAME-Variable, die in der Aufgabe
+verlangt war, und ein `test`-Target gibt es auch nicht [[-3]].

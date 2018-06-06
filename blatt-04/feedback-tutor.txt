@@ -1,0 +1,77 @@
+Hallo Victor,
+
+hier kommt mein Feedback zum Übungsblatt 4. Falls du irgendwelche Fragen hast,
+kannst du mich gerne unter brosi@informatik.uni-freiburg.de kontaktieren.
+
+
+# Übungsblatt 4
+
+Gesamtpunktzahl: 16 / 20
+
+
+## Generelles
+
+Dein Blatt hat bei mir leider nicht funktioniert und ein Debuggen hätte mich
+zuviel Zeit gekostet. Deine Funktionen waren aber weitgehend richtig (s.u.) und
+du hast die für die Umsetzung auch viel Mühe gegeben. Du hast diesmal keine
+Tests abgegeben, was eigentlich 0p bedeutet. Da es das erste Mal war, hab ich
+jetzt nur jeweils 20% abgezogen. In Zukunft werde ich aber nicht mehr so gnädig
+sein.
+
+Bitte achte doch drauf, den Copyright-Header richtig anzupassen, so dass nicht
+nur Prof. Bast drinsteht.
+
+Ein Tipp: bei boolschen Werten musst du nicht explizit auf == true testen, if
+(bla) {} genügt ;)
+
+
+## Aufgabe 1
+
+Punkte: 2 / 2
+
+Die Verwendung eines Arrays für die beiden Felder kann man natürlich machen :)
+Initialisierung passt auch, die Aufteilung in ein separates Render.cpp ist
+hübsch, hätte man aber nicht machen müssen - siehe ML.
+
+
+## Aufgabe 2
+
+Punkte: 3 / 3
+
+Die showState() passt, die Anzeige der aktuellen Iteration hast du auch
+umgesetzt.
+
+## Aufgabe 3
+
+Punkte: 3 / 5
+
+Deine aliveNeighbors stimmt, ist aber ungetestet.
+
+Bei der Update-State hast du einen kleinen Denkfehler: du gehst davon aus, dass
+oldCellPointer komplett leer ist. Das ist es aber nicht - d.h. du musst noch
+einen Default-Fall einführen, der die aktuelle Zelle löscht, wenn keine Regel
+zutrifft [[-1]].
+
+Da du keine Tests hast, gibt es hier außerdem -20% der möglichen Punkte [[-1]].
+
+
+## Aufgabe 4
+
+Punkte: 2 / 3
+
+Stimmt soweit, ist aber ungetestet [[-1]].
+
+
+## Aufgabe 5
+
+Punkte: 1 / 2
+
+Die Verwendung der Zeiger ist korrekt, allerdings tut ein Programm nichts, wenn
+ich starte [[-1]].
+
+## Aufgabe 6
+
+Punkte: 5 / 5
+
+Das passt :) Allerdings wäre es toll gewesen, wenn du für die gelinkten
+Bibliotheken noch eine globale Variable (z.B. LIBS) eingeführt hättest.
