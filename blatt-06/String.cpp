@@ -25,6 +25,13 @@ String::String(const String& s) {
   _id = ++_numObjects;
   // printf("Copy constructor ... created object #%d\n", _id);
 }
+String::String(const String& s, int length) {
+	_contents = new char[length + 1];
+	_contents[lenght] = 0;
+	memcpy(s,_contents,sizeof(char)*lenght);
+  _id = ++_numObjects;
+  // printf("Copy constructor ... created object #%d\n", _id);
+}
 
 // ___________________________________________________________________________
 String::~String() {
@@ -53,9 +60,12 @@ float String::toFloat() {
 
 unsigned char char2dez(char c)
   
-inline void String::split(char, int, String[]) {
-	for(int i = 0;i < length; i++) {
-		retVal += _contents[i] == c;
+inline void String::split(char c, int strSize, String[] str) {
+	for(int i = 0, int curLen = 0,int strIndex = 0;i < length && strIndex < strSize; i++, curLen++) {
+		if(_contents[i] == c) {
+			str[strIndex++] = new String(&_contents[i-curLen],curLen);
+			curLen = 0;
+		}
 	}
 }
 // ___________________________________________________________________________
@@ -64,10 +74,4 @@ void String::set(const char* s) {
   delete[] _contents;
   _contents = new char[_length + 1];
   for (int i = 0; i < _length + 1; i++) { _contents[i] = s[i]; }
-}
-
-void String::set(const char* s, int lenght){
-	_contents = new char[length + 1];
-	_contents[lenght] = 0;
-	memcpy(s,_contents,sizeof(char)*lenght);
 }
