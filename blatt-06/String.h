@@ -9,7 +9,8 @@
 // for Ü6.
 class String {
  private:
-  
+  String(char* s, int length);
+
  public:
   // Default constructor.
   String();
@@ -25,13 +26,13 @@ class String {
 
   // Set to given C-style string.
   void set(const char* s);
-  
-  
+
+
   int count(char);
-  
+
   float toFloat();
-  
-  inline void split(char, int, String[]);
+
+  void split(char, int, String[]);
   // The contents of the string. We use a null-terminated C-style string, so
   // that we can pass on _contents to C-style functions like printf("%s", ...).
   char* _contents;

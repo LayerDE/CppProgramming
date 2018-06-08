@@ -1,0 +1,60 @@
+Hallo Victor,
+
+hier kommt mein Feedback zum Übungsblatt 5. Falls du irgendwelche Fragen hast,
+kannst du mich gerne unter brosi@informatik.uni-freiburg.de kontaktieren.
+
+
+# Übungsblatt 5
+
+Gesamtpunktzahl: 19 / 20
+
+
+## Generelles
+
+
+Ich verabschiede mich für die nächsten 3 Wochen in den Urlaub :) Deine Abgabe
+für die nächsten 3 Blätter wird von Markus Näther (naether.markus@gmail.com)
+korrigiert werden.
+
+
+## Aufgabe 1
+
+Punkte: 9 / 10
+
+Das stimmt soweit, allerdings hast du die Verwendung von public und private
+noch nicht so ganz verstanden - es ist z.B. nicht nötig und evt. sogar
+gefährtlich, die updateState() nach außen publik zu machen. [[-1]] Hattest du
+das wegen den Tests gemacht? Dann geht es mit FRIEND_TEST (siehe die
+Musterlösung) deutlich einfacher und eleganter.
+
+Schreib doch in Zukunft deine Dokumentation bitte in die Header-Datei, wo
+sie eigentlich hingehört.
+
+## Aufgabe 2
+
+Punkte: 5 / 5
+
+Ja, das passt bis auf ein paar Details.
+
+Ein Tipp: wenn du die horizontalen Linien über den Funktionsimplementierungen
+übernimmst, mach sie doch bei zusätzlichen Funktionen auch hin. Das macht
+deinen Code deutlich einfach zu lesen.
+
+memset() ist eigentlich eine C-Funktion. Schau mal in der Musterlösung wie man
+das Grid im Konstruktor besser nullen kann. Ich hab dir da jetzt aber nichts
+abgezogen.
+
+## Aufgabe 3
+
+Punkte: optional
+
+Fehlt.
+
+## Aufgabe 4
+
+Punkte: 5 / 5
+
+Ja, korrekt. Allerdings gibt es keinen Grund, das Objekt hier mit new
+anzulegen. new konstruiert das Objekt immer auf dem Heap, in diesem Fall
+kannst du es einfach ohne new direkt auf dem stack initialisieren und
+sparst dir den Aufruf von delete am Ende.

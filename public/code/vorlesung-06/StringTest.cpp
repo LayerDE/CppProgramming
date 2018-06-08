@@ -124,7 +124,7 @@ TEST(StringTest, splitNoDelimiter) {
   String s;
   String parts[4];
   s.set("this;is;a;test");
-  s.split('!', 5, parts);
+  s.split('!', 4, parts);
   ASSERT_EQ('t', parts[0]._contents[0]);
   ASSERT_EQ('h', parts[0]._contents[1]);
   ASSERT_EQ('i', parts[0]._contents[2]);
