@@ -9,6 +9,7 @@
 // for Ü6.
 class String {
  private:
+  static unsigned char char2dez(char c);
   String(char* s, int length);
 
  public:

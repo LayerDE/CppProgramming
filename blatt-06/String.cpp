@@ -48,20 +48,26 @@ int String::count(char c) {
   return retVal;
 }
 
-unsigned char char2dez(char c) {
+unsigned char String::char2dez(char c) {
   return c-'0';
 }
 
 float String::toFloat() {
   float retVal = 0;
-  int i = 0;
+  int i = 0, factor = -1;
+  if (_contents[0] == '-')
+    i = 1;
+  else
+    factor = 1;
   for (; i < _length && _contents[i] != '.'; i++) {
     retVal = retVal * 10 + char2dez(_contents[i]);
   }
-  for (int j = 10; i < _length && _contents[i] != '.'; i++, j *= 10) {
-    retVal = retVal + char2dez(_contents[i]) / j;
+  i++;
+  for (int j = 10; i < _length && _contents[i] != '\n'; i++, j *= 10) {
+    retVal += static_cast<float>(char2dez(_contents[i]))
+      / static_cast<float>(j);
   }
-  return retVal;
+  return retVal * factor;
 }
 
 void String::split(char c, int strSize, String str[]) {
