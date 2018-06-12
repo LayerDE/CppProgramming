@@ -71,13 +71,18 @@ float String::toFloat() {
 }
 
 void String::split(char c, int strSize, String str[]) {
-  for (int i = 0, curLen = 0, strIndex = 0; i < _length
-    && strIndex < strSize; i++, curLen++) {
+  int i = 0, strIndex = 0, curLen = 0;
+  int splitter = count(c) < strSize-1 ? count(c) : strSize - 1;
+  for (; i < _length
+    && strIndex < splitter ; i++) {
     if (_contents[i] == c) {
       str[strIndex++] = *(new String(&_contents[i-curLen], curLen));
       curLen = 0;
+    } else {
+      curLen++;
     }
   }
+  str[splitter] = *(new String(&_contents[i], _length-i));
 }
 // ___________________________________________________________________________
 void String::set(const char* s) {
