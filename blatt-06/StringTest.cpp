@@ -1,6 +1,4 @@
-// Copyright 2018, University of Freiburg,
-// Chair of Algorithms and Data Structures.
-// Author: Axel Lehmann <lehmann@cs.uni-freiburg.de>.
+// Copyright 2018, Victor Maier
 
 #include <gtest/gtest.h>
 #include "./String.h"
