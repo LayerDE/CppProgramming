@@ -1,0 +1,33 @@
+Hallo Victor,
+
+hier kommt mein Feedback zum Übungsblatt 11. Falls du irgendwelche Fragen hast,
+kannst du mich gerne unter brosi@informatik.uni-freiburg.de kontaktieren.
+
+patrick
+
+# Übungsblatt 11
+
+Gesamtpunktzahl: 14 / 20
+
+## Generelles
+
+Ja, mit dem Ordnernamen hast du recht. Auf Blatt 12 wurde dann genauer
+spezifiziert, dass der Ordner "projekt" heißen sollte :)
+
+## Aufgabe 1
+
+Punkte: 14 / 20
+
+Deine Vorbereitungen sehen soweit in Ordnung aus :) Allerdings musste ich sehr
+viel interpretieren, da fast nirgends eine Dokumentation zu den Klassen /
+Methoden vorhanden war, wie verlangt [-1]. Ich gehe mal davon aus, dass du die
+Klasse Engine den Spielzustand in den Island und Bridge-Feldern speichert, was
+in Ordnung ist. Die Koordinaten der Inseln ergeben sich vermutlich aus ihrer
+Position in den Feldern, oder?
+
+Ich konnte zwar (triviale) Tests finden, aber die Implementierung einer
+nicht-trivialen Funktionen fehlt [-4], auch die Main-Methode wurde nicht
+implementiert [-1].
+
+Auch baut den Code nicht auf Jenkins, was ich jetzt mal habe durchgehen
+lassen.

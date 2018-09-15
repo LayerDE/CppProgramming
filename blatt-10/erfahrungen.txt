@@ -1,0 +1,1 @@
+Valgrind zeigt dass nur in den vorgegeben tests speicher verloren geht diese dateien wurden nicht geändert!!

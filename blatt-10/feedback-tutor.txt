@@ -1,0 +1,58 @@
+Hallo Victor,
+
+hier kommt mein Feedback zum Übungsblatt 10. Falls du irgendwelche Fragen hast,
+kannst du mich gerne unter brosi@informatik.uni-freiburg.de kontaktieren.
+
+
+# Übungsblatt 10
+
+Gesamtpunktzahl: 16 / 20
+
+## Generelles
+
+Ordentliche Abgabe, hatte nur Kleinigkeiten zu bemängeln. Dein Tool lief wegen
+einem Flüchtigkeitsfehler nicht, siehe dazu meinen Kommentar zu Aufg. 2 :)
+
+
+## Aufgabe 0
+
+Punkte: 20 / 20
+
+Du hattest die Evaluation ja schon letzte Woche gemacht, daher hier rückwirkend
+die 20 Punkte :) Vielen Dank für das Ausfüllen!
+
+## Aufgabe 1
+
+Punkte: 8 / 10
+
+Hier fehlt mir eine Dokumentation der Klassen in Entity.cpp oder Entity.h [-1]
+
+Vorsicht: du hast in allen 3 Klassen den Destruktor überschrieben, aber in der
+Base-Klase ist er nicht als virtual markiert. Wenn du jetzt einen Zeiger des
+Typs Entity* hast, der im Speicher auf eine Instanz von Person zeigt, und
+diesen mit delete löscht, wird nicht der korrekte Destruktor genommen! (sondern
+der der Basisklasse Entity) [-1]
+
+Warum hast du denn bei UpperName() dieses komplizierte Jonglieren mit
+string-Pointern gemacht? Das ist zwar soweit ich das sehe korrekt, aber du
+hättest einfach mit strings auf dem Stack operieren können und dann z.B. in
+checkString in Zeile 32 schreiben: const std::string& tmp2 = UpperName().
+
+Der Rest passt ;)
+
+## Aufgabe 2
+
+Punkte: 8 / 10
+
+Warum hast du denn die readFile in der Header-Datei implementiert, genauso den
+Destruktor? Das ist nicht verboten, aber sehr unschön ;)
+
+In Zeile 17 der WikidataMain wolltest du vermutlich arc > 1 schreiben, oder? ;)
+Weil gerade passiert gar nichts wenn ich dein Tool aufrufe [-1].
+
+Auch eine Nachricht nach dem Einlesen wäre schön gewesen (z.B. "Search: " oder
+so). Wenn ich Zeile 17 korrigiere, funktioniert bei mir aber alles super.
+
+Für die Sprungmarke und das goto looper; muss ich dir aber einen Punkt
+abziehen, das ist schon sehr hässlich und sollte man so auf keinen Fall machen.
+Bitte in Zukunft eine while(true)-Schleife für Endlosschleifen benutzen ;) [-1]

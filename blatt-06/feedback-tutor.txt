@@ -1,0 +1,59 @@
+Hallo Victor, 
+
+seit diesem Übungsblatt bin ich der Tutor für die nächsten Blätter, 
+ich werde auch Bescheid geben sobald dein eigentlicher Tutor, Patrick
+Brosi, wieder zurück ist. 
+
+Allgemein:
+Ich weiß nicht ob es dein bisheriger Tutor schon einmal angemerkt hat,
+aber eine erfahrungen.txt wäre natürlich sehr schön das wir mitbekommen
+wo es etwaige Probleme gab, was gut und schlecht war um die Vorlesung 
+mitsamt ihren Übungsblättern noch weiter zu verbessern.
+
+Allgemein:
+Makefile:
+.PHONY: all compile test checkstyke
+Das sollte wohl wie folgt heißen:
+.PHONY: all compile test checkstyle
+
+Aufgabe 1 ( 4 Punkte ) [Deklaration vervollständigen]:
+
+Keine Documentation der Methoden vorhanden. -1
+Public-Private wurde beachtet, sehr gut!
+Keine Beachtung von const-correctness. -1
+
+Aufgabe 2 ( 3 Punkte ) [int count(char)]:
+
+Soweit gut!
+
+Aufgabe 3 ( 3 Punkte ) [float toFloat()]:
+
+Das kann man natürlich so machen, aber warum hast du nicht einfach die erwähnt
+atof(...) Methode verwendet, das wäre dann nur eine Zeile gewesen ;)
+
+Aufgabe 4 ( 10 Punkte ) [void split(char, int, String[])]:
+
+valgrind Memory Report:
+==1344== LEAK SUMMARY:
+==1344==    definitely lost: 204 bytes in 24 blocks
+==1344==    indirectly lost: 0 bytes in 0 blocks
+==1344==      possibly lost: 0 bytes in 0 blocks
+==1344==    still reachable: 0 bytes in 0 blocks
+==1344==         suppressed: 0 bytes in 0 blocks
+
+Der Ursprung der Fehler ist auch recht klar:
+str[splitter] = *(new String(&_contents[i], _length-i));
+Hier wird der Speicher neu alloziert, jedoch der alte niemals freigegeben!
+
+Das ganze funktioniert natürlich, es ist aber nicht Sinn der Sache das nach der 
+Ausführung der Speicher unbrauchbar sein wird oder immernoch als 'besetzt' definiert
+ist wohingegen er schon längst wieder frei ist. -3
+
+Insgesamt: 15 / 20
+
+Das ist der bisherige Trend, kann sich aber bis zur finalen Besprechung
+des Übungsblattes noch einmal ändern. Nur das du möglichst schnell das 
+Feedback bekommst um die Änderungen für das kommende Blatt mit umzusetzen
+falls du deine eigene Implementation von String verwenden möchtest.
+
+Markus Näther <naetherm@informatik.uni-freiburg.de>
