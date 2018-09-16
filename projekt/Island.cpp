@@ -1,13 +1,14 @@
 #include "./Island.h"
+#include "./Bridge.h"
 #include <math.h>
 bool Island::isOk() {
     char curBridges = 0;
     for(int x = 0; x < conBridgesLen; x++)
-        curBridges += conBridges[x] -> getState();
+        curBridges += ((Bridge**)conBridges)[x] -> getState();
     return curBridges <= maxBridges;
 }
 
-void Island::addBridge(Bridge tmp[], int len){
+void Island::addBridge(void **tmp, int len){
 
 }
 bool Island::isClicked(float x, float y){
@@ -16,10 +17,10 @@ bool Island::isClicked(float x, float y){
 Island::Island(int hMaxBridges, float x, float y) : InputHitbox(x, y){
     maxBridges = hMaxBridges;
 }
-Island::Island(int hMaxBridges, float x, float y, Bridge* hConBridges[], int hConBridgesLen) : InputHitbox(x, y) {
+Island::Island(int hMaxBridges, float x, float y, void** hConBridges, int hConBridgesLen) : InputHitbox(x, y) {
     maxBridges = hMaxBridges;
     conBridgesLen = hConBridgesLen;
-    conBridges = new Bridge*[conBridgesLen];
+    conBridges = (void**)(new Bridge*[conBridgesLen]);
     for(int x = 0; x < conBridgesLen; x++)
         conBridges[x] = hConBridges[x];
 }

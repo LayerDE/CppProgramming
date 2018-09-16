@@ -7,10 +7,7 @@
 #include "./InputHitbox.h"
 
 class InputHandler {
- private:
-  Island** islands;
-  Bridge** bridges;
  public:
-  InputHitbox* getInput();
+  virtual InputHitbox* getInput() = 0;
 };
 #endif  // INPUTHANDLER_H_

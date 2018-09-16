@@ -1,5 +1,7 @@
 #ifndef INPUTHITBOX_H_
 #define INPUTHITBOX_H_
+#include <utility>
+
 
 class InputHitbox{
     private:
@@ -10,6 +12,7 @@ class InputHitbox{
     public:
         float getX();
         float getY();
+        std::pair<float,float> getPos();
 };
 
 #endif  // INPUTHITBOX_H_
