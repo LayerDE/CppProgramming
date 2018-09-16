@@ -4,9 +4,6 @@
 #include "./Renderer.h"
 
 class RendererConsole : Renderer{
- protected:
-  void* buffer;  // frame buffer
-  void* permanentBuffer;  // frame buffer for elements that are staying
  public:
   RendererConsole();  // init in constructor
   ~RendererConsole();  // cleanup

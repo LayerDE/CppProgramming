@@ -5,9 +5,10 @@
 #include "./Bridge.h"
 #include "./Island.h"
 #include "./InputHitbox.h"
+#include <utility>
 
 class InputHandler {
  public:
-  virtual InputHitbox* getInput() = 0;
+  virtual std::pair<float,float> getInput() = 0;
 };
 #endif  // INPUTHANDLER_H_

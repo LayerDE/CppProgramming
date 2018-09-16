@@ -3,7 +3,6 @@
 #define ISLAND_H_
 #include <utility>
 #include "./InputHitbox.h"
-//#include "./Bridge.h"
 #define ISLAND_RADIUS 2.0
 
 class Island : public InputHitbox {
