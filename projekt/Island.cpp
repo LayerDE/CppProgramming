@@ -1,6 +1,7 @@
+// Copyright [year] <Copyright Owner>
+#include <math.h>
 #include "./Island.h"
 #include "./Bridge.h"
-#include <math.h>
 bool Island::isOk() {
     char curBridges = 0;
     for(int x = 0; x < conBridgesLen; x++)

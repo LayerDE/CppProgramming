@@ -6,8 +6,8 @@
 #include "./InputHandler.h"
 
 class InputConsole : InputHandler {
-  public:
+ public:
   InputConsole();
-  std::pair<float,float> getInput();
+  std::pair<float, float> getInput();
 };
 #endif  // INPUTCONSOLE_H_

@@ -16,7 +16,8 @@ class Island : public InputHitbox {
   void addBridge(void** tmp, int len);
   bool isClicked(float x, float y);
   Island(int hMaxBridges, float x, float y);
-  Island(int hMaxBridges, float x, float y, void **hConBridges, int hConBridgesLen);
+  Island(int hMaxBridges, float x, float y,
+    void **hConBridges, int hConBridgesLen);
   ~Island();
   std::pair<float, float> getCoordinates();
 };

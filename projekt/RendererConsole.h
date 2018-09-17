@@ -5,10 +5,10 @@
 
 class RendererConsole : Renderer{
  private:
-  void drawBridgeVert(int x,int y, int len);
-  void drawBridgeHor(int x,int y, int len);
-  void draw2BridgeVert(int x,int y, int len);
-  void draw2BridgeHor(int x,int y, int len);
+  void drawBridgeVert(int x, int y, int len);
+  void drawBridgeHor(int x, int y, int len);
+  void draw2BridgeVert(int x, int y, int len);
+  void draw2BridgeHor(int x, int y, int len);
  public:
   RendererConsole();  // init in constructor
   ~RendererConsole();  // cleanup

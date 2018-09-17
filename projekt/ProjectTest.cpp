@@ -26,9 +26,9 @@ TEST(ProjectTest, BridgeComputeInput) {
 TEST(ProjectTest, IslandIsOK) {
   Island *iA, *iB, *iC;
   Bridge *bAB,*bAC;
-  iA = new Island(2, 0, 3);
-  iB = new Island(1, 0, 1);
-  iC = new Island(2, 3, 2);
+  iA = new Island(3, 2, 0);
+  iB = new Island(1, 1, 0);
+  iC = new Island(2, 2, 3);
   bAB = new Bridge(iA, iB);
   bAC = new Bridge(iA, iC);
   ASSERT_EQ(0, bAB->getState());

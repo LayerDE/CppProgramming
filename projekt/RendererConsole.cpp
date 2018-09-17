@@ -1,3 +1,4 @@
+// Copyright [year] <Copyright Owner>
 #include <ncurses.h>
 #include <math.h>
 #include "./Renderer.h"
