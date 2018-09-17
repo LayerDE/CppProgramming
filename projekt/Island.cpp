@@ -5,7 +5,7 @@ bool Island::isOk() {
     char curBridges = 0;
     for(int x = 0; x < conBridgesLen; x++)
         curBridges += ((Bridge**)conBridges)[x] -> getState();
-    return curBridges <= maxBridges;
+    return curBridges == maxBridges;
 }
 
 void Island::addBridge(void **tmp, int len){
@@ -14,6 +14,7 @@ void Island::addBridge(void **tmp, int len){
         tmp2[x] = conBridges[x];
     for(int x=0;x<len;x++)
         tmp2[x] = tmp[x];
+    conBridgesLen += len;
     delete conBridges;
     conBridges = tmp2;
 }
@@ -32,6 +33,8 @@ bool Island::isClicked(float x, float y){
 }
 Island::Island(int hMaxBridges, float x, float y) : InputHitbox(x, y){
     maxBridges = hMaxBridges;
+    conBridgesLen = 0;
+    conBridges = new void*[conBridgesLen];
 }
 Island::Island(int hMaxBridges, float x, float y, void** hConBridges, int hConBridgesLen) : InputHitbox(x, y) {
     maxBridges = hMaxBridges;

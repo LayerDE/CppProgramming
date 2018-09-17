@@ -28,7 +28,7 @@ TEST(ProjectTest, IslandIsOK) {
   Bridge *bAB,*bAC;
   iA = new Island(2, 0, 3);
   iB = new Island(1, 0, 1);
-  iB = new Island(2, 3, 2);
+  iC = new Island(2, 3, 2);
   bAB = new Bridge(iA, iB);
   bAC = new Bridge(iA, iC);
   ASSERT_EQ(0, bAB->getState());
@@ -37,7 +37,7 @@ TEST(ProjectTest, IslandIsOK) {
   ASSERT_EQ(1, bAB->getState());
   ASSERT_EQ(false, iA ->isOk());
   bAB->computeInput();
-  ASSERT_EQ(2, bAC->getState());
+  ASSERT_EQ(2, bAB->getState());
   ASSERT_EQ(false, iA ->isOk());
   bAC->computeInput();
   ASSERT_EQ(1, bAC->getState());
