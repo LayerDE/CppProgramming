@@ -26,4 +26,5 @@ std::pair<float,float> InputConsole::getInput(){
       }
       break;
   }
+  return {-1.0f,0.0f};
 }

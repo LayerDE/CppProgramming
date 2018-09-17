@@ -17,5 +17,11 @@ RendererConsole::~RendererConsole() {
 }
 
 void RendererConsole::drawFrame() {
-    
+    char tmp[COLS+1];
+    tmp[COLS] = '\0';
+    for(int y=0;y<LINES;y++){
+        for(int x=0;x<COLS;x++)
+            tmp[0]=((char*)buffer)[y*COLS+x];
+        mvprintw(y,0,tmp);
+    }
 }

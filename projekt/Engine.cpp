@@ -10,10 +10,9 @@ void Engine::addRenderer(Renderer *tmp){
 }
 
 bool Engine::checkFin(){
-    for(int x = 0; x < islandLen; x++){
+    for(int x = 0; x < islandLen; x++)
         if(!islands[x] -> isOk())
             return false;
-    }
     return true;
 }
 

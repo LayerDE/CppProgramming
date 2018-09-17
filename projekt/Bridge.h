@@ -1,5 +1,6 @@
 // Copyright [year] <Copyright Owner>
 // NO CLEANUP
+// NO TODO
 #ifndef BRIDGE_H_
 #define BRIDGE_H_
 #include "./InputHitbox.h"
