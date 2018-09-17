@@ -14,8 +14,19 @@ void Island::addBridge(void **tmp, int len){
         tmp2[x] = conBridges[x];
     for(int x=0;x<len;x++)
         tmp2[x] = tmp[x];
-
+    delete conBridges;
+    conBridges = tmp2;
 }
+
+void Island::addBridge(void *tmp){
+    void** tmp2 = new void*[conBridgesLen+1];
+    for(int x=0;x<conBridgesLen;x++)
+        tmp2[x] = conBridges[x];
+    tmp2[conBridgesLen++] = tmp;
+    delete conBridges;
+    conBridges = tmp2;
+}
+
 bool Island::isClicked(float x, float y){
     return pow(x-getX(),2) + pow(y-getY(),2) <= pow(ISLAND_RADIUS,2);
 }

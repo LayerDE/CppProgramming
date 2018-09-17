@@ -12,6 +12,7 @@ class Island : public InputHitbox {
   int conBridgesLen;
  public:
   bool isOk();
+  void addBridge(void *tmp);
   void addBridge(void** tmp, int len);
   bool isClicked(float x, float y);
   Island(int hMaxBridges, float x, float y);

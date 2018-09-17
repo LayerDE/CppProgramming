@@ -7,6 +7,8 @@ Bridge::Bridge(Island *a, Island *b) :
         len = sqrt(pow(a->getX() - b->getX(),2) + pow(a->getY() - b->getY(),2));
         vertical = abs(a->getX() - b->getX()) < abs(getY() - b->getY());
         isActive = isDouble = false;
+    a -> addBridge(this);
+    b -> addBridge(this);
 }
 
 bool Bridge::isClicked(float x, float y){
