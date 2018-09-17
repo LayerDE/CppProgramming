@@ -1,9 +1,9 @@
 // Copyright [year] <Copyright Owner>
 
 #include <gtest/gtest.h>
+#include <string>
 #include "./Bridge.h"
 #include "./Island.h"
-#include <string>
 
 TEST(ProjectTest, BridgeComputeInput) {
   Island *iA, *iB;

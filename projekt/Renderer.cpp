@@ -1,5 +1,5 @@
 // Copyright [year] <Copyright Owner>
-#include "Renderer.h"
+#include "./Renderer.h"
 
 Renderer::~Renderer() {
     delete buffer;
