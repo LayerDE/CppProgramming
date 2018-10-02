@@ -1,0 +1,76 @@
+Hallo Victor,
+
+hier kommt mein Feedback zum Projekt. Falls du irgendwelche Fragen hast, kannst
+du mich gerne unter brosi@informatik.uni-freiburg.de kontaktieren.
+
+
+# Projekt
+
+Gesamtpunktzahl: 36 / 80
+
+## Generelles
+
+Hm, dein Spiel ist leider nicht spielbar, und ich erkenne auch nicht sehr
+viel, was ausprogrammiert wäre, schade. Dein Code kompiliert auch nicht
+auf Jenkins. Ich habe unten mal versucht, Punkte zusammenzukratzen. Zu-
+sammen mit den Punkten von ÜB 11 hast du jetzt genau 50 Punkte, was zum
+Bestehen reicht.
+
+## Funktionalität & Code
+
+Punkte: 22 / 48
+
+Es fällt mir schwer, aus dem bestehenden Code zu erkennen, wohin die Reise
+sollte. Es ist nichts dokumentiert, und oft hat man das Gefühl, dass hier
+schon während dem Anlegen des Codes zu kompliziert gedacht wurde.
+Warum du z.B. eine virtuelle Klasse Inputhandler angelegt hast, erschließt
+sich mir nicht. Dass man verschiedenen InputHandler-Klassen
+verwenden können soll, war nicht gefordert und ist auch nicht sinnvoll
+(ähnliches gilt auch an anderen Stellen).
+
+Code zum Einlesen von Instanzen konnte ich nicht finden, und ist auch nicht
+angelegt. Der Code zum Aufbauen von Spielinstanzen (hinzufügen von
+Inseln / Brücken) ist aber angelegt (-10).
+
+Das Einlesen und Abspielen von Lösungsfiles fehlt ebenso (-4).
+
+Die Konsolengrafik scheint mir in der RenderConsole.cpp angelegt zu sein und
+sieht halbwegs korrekt aus. Allerdings fehlt die geforderte farbliche
+Markierung bzw. entsprechende Prüflogik (wie die gesamte Spiellogik) komplett
+(-3).
+
+Die Undo-Funktionalität fehlt ebenso komplett (-9).
+
+Die angelegte Modularisierung scheint mir zwar etwas overengineered, ist aber
+zumindest durchdacht. Benennungen etc sind auch sinnvoll.
+
+Allerdings stolpert man immer wieder über solche Konstrukte hier:
+
+void Island::addBridge(void *tmp) {
+    void** tmp2 = new void*[conBridgesLen+1];
+    for (int x = 0; x < conBridgesLen; x++)
+        tmp2[x] = conBridges[x];
+    tmp2[conBridgesLen++] = tmp;
+    delete conBridges;
+    conBridges = tmp2;
+}
+
+Wieso hast du denn versucht, ein dynamisches Array selbst zu programmieren?
+Hier wäre es sicher einfacher gewesen, einfach einen vector zu verwenden.
+Außerdem ist die maximale Anzahl von Brücken pro Knoten doch beschränkt - ein
+Array der festen Größe 8 hätte in jedem Fall ausgereicht. Hab dir dafür jetzt
+aber nichts abgezogen.
+
+## Tests
+
+Punkte: 8 / 16
+
+Sehr wohlwollend würde ich hier sagen, dass von deiner umgesetzten Funktionalität
+hier ca. 50% getestet sind. (-8)
+
+## Doku und Checkstyle
+
+Punkte: 6 / 16
+
+Checkstyle läuft leider nicht durch, da gibts es ein paar Probleme (-2).
+Doku ist bis auf wenige Ausnahmen nicht vorhanden (-8).
