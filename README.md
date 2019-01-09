@@ -3,24 +3,24 @@
 
 ### Blätter Bearbeitet:
 - [x] Blatt 01
-- [ ] Blatt 02
-- [ ] Blatt 03
-- [ ] Blatt 04
-- [ ] Blatt 05
-- [ ] Blatt 06
-- [ ] Blatt 07
-- [ ] Blatt 08
-- [ ] Blatt 09
-- [ ] Blatt 10
+- [x] Blatt 02
+- [x] Blatt 03
+- [x] Blatt 04
+- [x] Blatt 05
+- [x] Blatt 06
+- [x] Blatt 07
+- [x] Blatt 08
+- [x] Blatt 09
+- [x] Blatt 10
 
 ### Blätter Korrigiert:
-- [ ] Blatt 01
-- [ ] Blatt 02
-- [ ] Blatt 03
-- [ ] Blatt 04
-- [ ] Blatt 05
-- [ ] Blatt 06
-- [ ] Blatt 07
-- [ ] Blatt 08
-- [ ] Blatt 09
-- [ ] Blatt 10
+- [x] Blatt 01
+- [x] Blatt 02
+- [x] Blatt 03
+- [x] Blatt 04
+- [x] Blatt 05
+- [x] Blatt 06
+- [x] Blatt 07
+- [x] Blatt 08
+- [x] Blatt 09
+- [x] Blatt 10
